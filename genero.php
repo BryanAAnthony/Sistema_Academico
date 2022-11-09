@@ -61,14 +61,14 @@ include "include/verificar_sesion.php";
                       </thead>
                       <tbody>
                         <?php 
-                        $b_estudiantes = buscarEstudiantes($conexion);
-                        while ($res_b_estudiantes = mysqli_fetch_array($b_estudiantes)) {
+                        $b_genero = buscarGenero($conexion);
+                        while ($res_b_genero = mysqli_fetch_array($b_genero)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_estudiantes['id']; ?></td>
-                          <td><?php echo $res_b_estudiantes['dni']; ?></td>
-                          <td><?php echo $res_b_estudiantes['apellidos_nombres'];  ?></td>
-                          <td><?php echo $res_b_estudiantes['direccion']; ?></td>
+                          
+                      
+                    
+                 
                           <td><?php echo $res_b_estudiantes['id_programa_estudios']; ?></td>
                           <td><?php echo $res_b_estudiantes['id_semestre']; ?></td>
                           <td>
