@@ -55,12 +55,15 @@ include "include/verificar_sesion.php";
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>DNI</th>
-                          <th>APELLIDOS Y NOMBRES</th>
+                          <th>RUC</th>
+                          <th>NOMBRE INSTITUCIONAL</th>
+                          <th>DEPARTAMENTO</th>
+                          <th>PROVINCIA</th>
+                          <th>DISTRITO</th>
                           <th>DIRECCION</th>
-                          <th>CARRERA</th>
-                          <th>SEMESTRE</th>
-                          <th>Acciones</th>
+                          <th>TELEFONO</th>
+                          <th>CORREO</th>
+                          <th>NRO RESOLUCION</th>
                         </tr>
                       </thead>
                       <tbody>
