@@ -62,7 +62,7 @@ include "include/verificar_sesion.php";
                         </tr>
                       </thead>
                       <tbody>
-                        <?php 
+                        <?php
                         $b_estudiantes = buscarEstudiantes($conexion);
                         while ($res_b_estudiantes = mysqli_fetch_array($b_estudiantes)) {
                         ?>
