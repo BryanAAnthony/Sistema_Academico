@@ -55,7 +55,7 @@ include "include/verificar_sesion.php";
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>RUCCC</th>
+                          <th>RUC</th>
                           <th>NOMBRE INSTITUCIONAL</th>
                           <th>DEPARTAMENTO</th>
                           <th>PROVINCIA</th>

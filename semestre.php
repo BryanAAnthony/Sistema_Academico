@@ -44,7 +44,7 @@ include "include/verificar_sesion.php";
                     <h2>Relacion de Estudiantes</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="cargo1.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -54,9 +54,21 @@ include "include/verificar_sesion.php";
                     <table id="example" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Id</th>
-                          <th>descripcion</th>
-                          
+                          <th>id</th>
+                          <th>dni</th>
+                          <th>apellidos_nombres</th>
+                          <th>id_genero</th>
+                          <th>fecha_nac</th>
+                          <th>direccion</th>
+                          <th>correo</th>
+                          <th>telefono</th>
+                          <th>anio_ingreso</th>
+                          <th>id_programa_estudios</th>
+                          <th>id_semestre</th>
+                          <th>seccion</th>
+                          <th>turno</th>
+                          <th>id_condicion</th>
+                          <th>discapacidad</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -77,7 +89,7 @@ include "include/verificar_sesion.php";
                           </td>
                         </tr>
                         <?php
-                                     
+                        }
                         ?>
                         
                       </tbody>
