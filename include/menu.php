@@ -16,7 +16,7 @@
               </div>
               <div class="profile_info">
                 <span>Bienbenido,</span>
-                <h1>Brayan Anthony<?php echo $res_b_u_s['apellidos_nombres']; ?>Moreno Montes</h1>
+                <h2>Brayan<?php echo $res_b_u_s['apellidos_nombres']; ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
