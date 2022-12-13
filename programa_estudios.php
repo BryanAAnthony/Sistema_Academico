@@ -44,7 +44,7 @@ include "include/verificar_sesion.php";
                     <h2>Relacion de Estudiantes</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="programa_estudios1.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -54,7 +54,7 @@ include "include/verificar_sesion.php";
                     <table id="example" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Id</th>
+                          <th>id</th>
                           <th>codigo</th>
                           <th>tipo</th>
                           <th>nombre</th>
@@ -68,12 +68,11 @@ include "include/verificar_sesion.php";
                         ?>
                         <tr>
                           <td><?php echo $res_b_estudiantes['id']; ?></td>
-                          <td><?php echo $res_b_estudiantes['dni']; ?></td>
-                          <td><?php echo $res_b_estudiantes['apellidos_nombres'];  ?></td>
-                          <td><?php echo $res_b_estudiantes['direccion']; ?></td>
-                          <td><?php echo $res_b_estudiantes['id_programa_estudios']; ?></td>
-                          <td><?php echo $res_b_estudiantes['id_semestre']; ?></td>
-                          <td>
+                          <td><?php echo $res_b_estudiantes['codigo']; ?></td>
+                          <td><?php echo $res_b_estudiantes['tipo'];  ?></td>
+                          <td><?php echo $res_b_estudiantes['nombre']; ?></td>
+                          <td><?php echo $res_b_estudiantes['resolucion']; ?></td>
+                          
                             <a href="editar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-primary">Editar</a>
                             <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
