@@ -41,10 +41,10 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Relacion de Estudiantes</h2>
+                    <h2>SEMESTRES</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="semestres.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -54,31 +54,70 @@ include "include/verificar_sesion.php";
                     <table id="example" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>id</th>
-                          <th>dni</th>
-                          <th>apellidos_nombres</th>
-                          <th>id_genero</th>
-                          <th>fecha_nac</th>
-                          <th>direccion</th>
-                          <th>correo</th>
-                          <th>telefono</th>
-                          <th>anio_ingreso</th>
-                          <th>id_programa_estudios</th>
-                          <th>id_semestre</th>
-                          <th>seccion</th>
-                          <th>turno</th>
-                          <th>id_condicion</th>
-                          <th>discapacidad</th>
+                          <th>I</th>
+                          <th>II</th>
+                          <th>III</th>
+                          <th>IV</th>
+                          <th>V</th>
+                          <th>VI</th>
+                          
                         </tr>
                       </thead>
+                      <tr>
+                          <td>mantenimiento de computadoras</td>
+                          <td>fisca</td>
+                          <td>comercio electronico</td>
+                          <td>diseño web</td>
+                          <td>ANIMACION DE GRAFICO</td>
+                          <td>DISEÑO WEB</td>
+                        </tr>
+                        <tr>
+                          <td>mantenimiento de computadoras</td>
+                          <td>fisca</td>
+                          <td>comercio electronico</td>
+                          <td>diseño web</td>
+                          <td>DISEÑO GRAFICO</td>
+                          <td>COMERCIO ELECTRONICO</td>
+                        </tr>
+                        <tr>
+                          <td>mantenimiento de computadoras</td>
+                          <td>fisca</td>
+                          <td>comercio electronico</td>
+                          <td>diseño web</td>
+                          <td>COMUNICACION EMPRESARIAL</td>
+                          <td>COMPORTAMIENTO ETICO</td>
+                        </tr>
+                        <tr>
+                          <td>mantenimiento de computadoras</td>
+                          <td>fisca</td>
+                          <td>comercio electronico</td>
+                          <td>diseño web</td>
+                          <td>DISEÑO WEB</td>
+                          <td>LEGISLACION E INSERCION LABORAL</td>
+                        </tr>
+                        <tr>
+                          <td>mantenimiento de computadoras</td>
+                          <td>fisca</td>
+                          <td>comercio electronico</td>
+                          <td>diseño web</td>
+                          <td>COMPORTAMIENTO ETICO</td>
+                          <td>APLICACIONES MOVILES</td>
+                        </tr>
                       <tbody>
+                      <tbody>
+                        
                         <?php 
                         $b_estudiantes = buscarEstudiantes($conexion);
                         while ($res_b_estudiantes = mysqli_fetch_array($b_estudiantes)) {
                         ?>
                         <tr>
                           <td><?php echo $res_b_estudiantes['id']; ?></td>
-                          <td><?php echo $res_b_estudiantes['dni']; ?></td>
+                          <td><?php echo $res_b_estudiantes['descripcion']; ?></td>
+
+
+
+
+
                           <td><?php echo $res_b_estudiantes['apellidos_nombres'];  ?></td>
                           <td><?php echo $res_b_estudiantes['direccion']; ?></td>
                           <td><?php echo $res_b_estudiantes['id_programa_estudios']; ?></td>
@@ -167,3 +206,5 @@ include "include/verificar_sesion.php";
     </script>
   </body>
 </html>
+
+
