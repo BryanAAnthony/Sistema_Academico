@@ -40,30 +40,60 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Registro de Estudiante</h2>
+                    <h2>Registro de Docentes</h2>
                     
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_estudiante.php">
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_docentes.php">
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">DNI :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">dni :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="number" name="dni" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Apellidos y Nombres :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">apellidos_nombres :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" name="nom_ap" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
+                     
+                      
                       <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Genero :</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">fecha_nac :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="date" name="fecha_nac" class="date-picker form-control col-md-7 col-xs-12" required="required" >
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">dirección :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="direccion" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">correo :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="email" name="email" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">telefono :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="number" name="cel" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">id_genero :</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                         <select name="id_genero" id="id_genero" class="form-control col-md-7 col-xs-12">
                           <option value="">Seleccione</option>
@@ -78,44 +108,8 @@ include "include/verificar_sesion.php";
                         </select>
                         </div>
                       </div>
-                      
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Fecha de Nacimiento :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_nac" class="date-picker form-control col-md-7 col-xs-12" required="required" >
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Dirección :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="direccion" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Correo :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="email" name="email" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">NRO Celular :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="cel" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Año de Ingreso :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="anio_ingreso" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Programa de Estudios :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">nivel_educacion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                         <select name="programa_estudio" id="programa_estudio" class="form-control col-md-7 col-xs-12">
@@ -132,7 +126,7 @@ include "include/verificar_sesion.php";
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Semestre:
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">cond_laboral:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                         <select name="semestre" id="semestre" class="form-control col-md-7 col-xs-12">
@@ -148,22 +142,9 @@ include "include/verificar_sesion.php";
                         </select>
                         </div>
                       </div>
+                      
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Seccion :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="seccion" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Turno :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="turno" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Condición :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">id_cargo :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                         <select name="condicion" id="condicion" class="form-control col-md-7 col-xs-12">
@@ -179,17 +160,8 @@ include "include/verificar_sesion.php";
                         </select>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Discapacidad :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select name="discapacidad" id="discapacidad" class="form-control col-md-7 col-xs-12">
-                            <option value="">Seleccione</option>
-                            <option value="SI">SI</option>
-                            <option value="NO">NO</option>
-                          </select>
-                        </div>
-                      </div>
+                      
+
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">

@@ -17,6 +17,7 @@
               <div class="profile_info">
                 <span>Welcome,</span>
                 <h2><?php echo $res_b_u_s['apellidos_nombres']; ?></h2>
+                <Samp>BRAYAN</Samp>
               </div>
             </div>
             <!-- /menu profile quick info -->
