@@ -46,7 +46,7 @@ include "include/verificar_sesion.php";
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_estudiante.php">
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_semestre.php">
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">DNI :
@@ -68,10 +68,10 @@ include "include/verificar_sesion.php";
                         <select name="id_genero" id="id_genero" class="form-control col-md-7 col-xs-12">
                           <option value="">Seleccione</option>
                           <?php
-                          $buscar_genero = buscarGenero($conexion);
-                          while ($res_b_genero = mysqli_fetch_array($buscar_genero)) {
+                          $buscar_genero = buscarSemestre($conexion);
+                          while ($res_b_semestre = mysqli_fetch_array($buscar_semestre)) {
                           ?>
-                          <option value="<?php echo $res_b_genero['id']; ?>"><?php echo $res_b_genero['genero']; ?></option>
+                          <option value="<?php echo $res_b_semestre['id']; ?>"><?php echo $res_b_semestre['semestre']; ?></option>
                           <?php
                           };
                           ?>
