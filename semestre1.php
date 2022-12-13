@@ -40,7 +40,7 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>REGISTROS DE SEMESTRES ACADEMICOS</h2>
+                    <h2>Registro semestre</h2>
                     
                     <div class="clearfix"></div>
                   </div>
@@ -49,14 +49,14 @@ include "include/verificar_sesion.php";
                     <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_semestre.php">
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">DNI :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">id :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="number" name="dni" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
-                    </div>
+                      </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Apellidos y Nombres :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">descripcion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" name="nom_ap" required="required" class="form-control col-md-7 col-xs-12">
@@ -68,10 +68,10 @@ include "include/verificar_sesion.php";
                         <select name="id_genero" id="id_genero" class="form-control col-md-7 col-xs-12">
                           <option value="">Seleccione</option>
                           <?php
-                          $buscar_genero = buscarSemestre($conexion);
-                          while ($res_b_semestre = mysqli_fetch_array($buscar_semestre)) {
+                          $buscar_genero = buscarGenero($conexion);
+                          while ($res_b_genero = mysqli_fetch_array($buscar_genero)) {
                           ?>
-                          <option value="<?php echo $res_b_semestre['id']; ?>"><?php echo $res_b_semestre['semestre']; ?></option>
+                          <option value="<?php echo $res_b_genero['id']; ?>"><?php echo $res_b_genero['genero']; ?></option>
                           <?php
                           };
                           ?>
@@ -194,7 +194,7 @@ include "include/verificar_sesion.php";
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                           <button class="btn btn-primary" type="button">Cancelar</button>
-              <button class="btn btn-primary" type="reset">Limpiar</button>
+						  <button class="btn btn-primary" type="reset">Limpiar</button>
                           <button type="submit" class="btn btn-success">Guardar</button>
                         </div>
                       </div>
@@ -257,4 +257,3 @@ include "include/verificar_sesion.php";
     <script src="Gentella/build/js/custom.min.js"></script>
   </body>
 </html>
-
